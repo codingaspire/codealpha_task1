@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - ShopNow</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">ShopNow</a>
+      <div class="navbar-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/cart.html" class="nav-link">
+          Cart
+          <span class="cart-count">0</span>
+        </a>
+        <div id="auth-links">
+          <a href="/auth.html" class="nav-link">Login/Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="cart-section">
+    <div class="container">
+      <h1 class="section-title">Shopping Cart</h1>
+      <div class="cart-container">
+        <div id="cart-items-container" class="cart-items"></div>
+        <div id="empty-cart" class="empty-cart" style="display: none;">
+          <p>Your cart is empty</p>
+          <a href="/" class="btn btn-primary">Continue Shopping</a>
+        </div>
+        <div id="cart-summary" class="cart-total">
+          <span class="cart-total-label">Total:</span>
+          <span class="cart-total-amount" id="cart-total">$0.00</span>
+        </div>
+        <div style="text-align: right; margin-top: 1rem;">
+          <button class="btn btn-success" onclick="checkout()">Proceed to Checkout</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

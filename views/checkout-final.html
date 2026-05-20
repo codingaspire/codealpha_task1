@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirm Order - ShopNow</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="navbar-brand">ShopNow</a>
+      <div class="navbar-nav">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/cart.html" class="nav-link">
+          Cart
+          <span class="cart-count">0</span>
+        </a>
+        <div id="auth-links">
+          <a href="/auth.html" class="nav-link">Login/Register</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="checkout-section">
+    <div class="container">
+      <h1 class="section-title">Confirm Your Order</h1>
+      <div class="checkout-container">
+        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div class="checkout-form-container">
+            <h2 style="margin-bottom: 1rem;">Shipping Address</h2>
+            <div id="final-address" class="order-address"></div>
+          </div>
+          
+          <div class="checkout-form-container">
+            <h2 style="margin-bottom: 1rem;">Order Items</h2>
+            <div id="final-items"></div>
+          </div>
+        </div>
+        
+        <div class="checkout-summary">
+          <h2 style="margin-bottom: 1.5rem;">Payment Summary</h2>
+          
+          <div class="coupon-section">
+            <h3 style="margin-bottom: 0.5rem;">Apply Coupon</h3>
+            <p style="font-size: 0.875rem; color: #6b7280; margin-bottom: 0.5rem;">Try CODEALPHA for 15% off!</p>
+            <div class="coupon-input-group">
+              <input type="text" id="coupon-code" class="coupon-input" placeholder="Enter coupon code">
+              <button class="btn btn-secondary" onclick="applyCoupon()">Apply</button>
+            </div>
+            <div id="coupon-applied" class="coupon-applied" style="display: none;"></div>
+          </div>
+          
+          <div class="price-row">
+            <span>Subtotal:</span>
+            <span id="final-subtotal">$0.00</span>
+          </div>
+          <div class="price-row discount" style="display: none;">
+            <span>Discount:</span>
+            <span id="final-discount">-$0.00</span>
+          </div>
+          <div class="price-row total">
+            <span>Total:</span>
+            <span id="final-total">$0.00</span>
+          </div>
+          
+          <button class="btn btn-success" style="width: 100%; margin-top: 1.5rem;" onclick="placeOrder()">Place Order</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
